@@ -10,9 +10,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import ShopPattern.dao.UserDao;
+import ShopPattern.service.UserService;
 import ShopPattern.entity.Role;
 import ShopPattern.entity.User;
-import ShopPattern.service.UserService;
 
 @Service("userDetailsService")
 public class UserServiceImpl implements UserService, UserDetailsService {

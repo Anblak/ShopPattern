@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ShopPattern.dao.GoodsDao;
-import ShopPattern.entity.Goods;
 import ShopPattern.service.GoodsService;
+import ShopPattern.entity.Goods;
 
 @Service
 public class GoodsServiceImpl implements GoodsService {

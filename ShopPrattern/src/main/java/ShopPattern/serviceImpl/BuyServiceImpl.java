@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ShopPattern.dao.BuyDao;
-import ShopPattern.entity.Buy;
 import ShopPattern.service.BuyService;
+import ShopPattern.entity.Buy;
 
 
 @Service
