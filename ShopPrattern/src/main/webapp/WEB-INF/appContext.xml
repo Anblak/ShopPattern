@@ -25,9 +25,9 @@
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
 
-    <context:component-scan base-package="ShopPattern.*"/>
+    <context:component-scan base-package="com.shopPattern.*"/>
 
-    <jpa:repositories base-package="ShopPattern.dao"/>
+    <jpa:repositories base-package="com.shopPattern.dao"/>
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
