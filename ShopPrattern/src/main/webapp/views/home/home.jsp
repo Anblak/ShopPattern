@@ -96,18 +96,58 @@
 		
 	
   </header>
-   <main class="body"> 
+    <main class="body"> 
 		<div id="wrapper" >
-				<div class="container">
-					<div class="wrapper-catalog">
+				<div class="container"  >
+				
+					<div class="wrapper-catalog" id="catalog-menu" >
 						<div class="text-catalog">
 							<center>
 								<p/>Каталог товарів<p>
 							</center>
 						</div>
-						<div class="left-main-catalog">
+						<div class="left-main-catalog" id="catalog">
+						<p><a  href="#1-catalog">kategoria1</a></p>
+						<p><a  href="#2-catalog">kategoria2</a></p>
+						<p><a  href="#3-catalog">kategoria3</a></p>
+						<p><a  href="#4-catalog">kategoria4</a></p>
 						</div>
+					
+				<div id="cantainer-catalog" class="cantainer-catalog">
+					<div class="categoria-menu" id="1-catalog">
+						<p><a  href="#4">kategoria1.1</a></p>
+						<p><a  href="#4">kategoria1.2</a></p>
+						<p><a  href="#4">kategoria1.3</a></p>
+						<p><a  href="#4">kategoria1.4</a></p>
+						<p><a  href="#4">kategoria1.5</a></p>
+						<p><a  href="#4">kategoria1.5</a></p>
 					</div>
+					<div class="categoria-menu" id="2-catalog">
+						<p><a  href="#4">kategoria2.1</a></p>
+						<p><a  href="#4">kategoria2.2</a></p>
+						<p><a  href="#4">kategoria2.3</a></p>
+						<p><a  href="#4">kategoria2.4</a></p>
+						<p><a  href="#4">kategoria2.5</a></p>
+						<p><a  href="#4">kategoria2.5</a></p>
+					</div>
+					<div class="categoria-menu" id="3-catalog">
+						<p><a  href="#4">kategoria3.1</a></p>
+						<p><a  href="#4">kategoria3.2</a></p>
+						<p><a  href="#4">kategoria3.3</a></p>
+						<p><a  href="#4">kategoria3.4</a></p>
+						<p><a  href="#4">kategoria3.5</a></p>
+						<p><a  href="#4">kategoria3.5</a></p>
+					</div>
+					<div class="categoria-menu" id="4-catalog">
+						<p><a  href="#4">kategoria4.1</a></p>
+						<p><a  href="#4">kategoria4.2</a></p>
+						<p><a  href="#4">kategoria4.3</a></p>
+						<p><a  href="#4">kategoria4.4</a></p>
+						<p><a  href="#4">kategoria4.5</a></p>
+						<p><a  href="#4">kategoria4.5</a></p>
+					</div>
+				</div>
+				</div>
 				</div>
 		</div>
    </main>
@@ -126,3 +166,4 @@
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/researchbutton.js"></script>
 	<script src="js/script.js"></script>
+	<script>action()</script>
