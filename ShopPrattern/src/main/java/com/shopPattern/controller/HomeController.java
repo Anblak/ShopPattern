@@ -9,7 +9,7 @@ public class HomeController {
 	@RequestMapping(value={"/","/home"},method=RequestMethod.GET)
 	public String home(){
 		
-		return "views-home-home";
+		return "home";
 		
 	}
 	@RequestMapping(value = "/home", method = RequestMethod.POST)
@@ -20,7 +20,7 @@ public class HomeController {
 	
 	@RequestMapping("/loginpage")
 	public String login() {
-		return "views-security-loginpage";
+		return "loginpage";
 	}
 
 	@RequestMapping(value = "/logout", method = RequestMethod.POST)
