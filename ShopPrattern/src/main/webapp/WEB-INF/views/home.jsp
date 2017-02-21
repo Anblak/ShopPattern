@@ -111,6 +111,7 @@
 								<p/>Каталог товарів<p>
 							</center>
 						</div>
+						<div class="catalog-full" id="catalog-full">
 						<div class="left-main-catalog" id="catalog">
 						<p><a  href="#1-catalog">kategoria1</a></p>
 						<p><a  href="#2-catalog">kategoria2</a></p>
@@ -151,6 +152,7 @@
 						<p><a  href="#4">kategoria4.5</a></p>
 						<p><a  href="#4">kategoria4.5</a></p>
 					</div>
+				</div>
 				</div>
 				</div>
 				</div>

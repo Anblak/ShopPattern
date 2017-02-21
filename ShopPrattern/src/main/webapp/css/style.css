@@ -11,6 +11,7 @@ body{
 	background:#faf8fb;
 	
 }
+
 header{
 	background: linear-gradient(to top, #e3e9ea,white);
 	 
@@ -272,6 +273,7 @@ i.ic-heart{
 	height:auto;
 	min-height:500px;
 	display:block;
+	clear:none;
 	
 }
 .text-catalog{
@@ -290,7 +292,7 @@ i.ic-heart{
 	float:left;
 	
 	
-	
+		
 	width:auto;
 	min-width:300px;
 	height:auto;
@@ -314,7 +316,7 @@ i.ic-heart{
 	
 	
 	float:left;
-	clear:left;
+	clear:none;
 }
 
 .categoria-menu{
@@ -331,4 +333,8 @@ i.ic-heart{
 	min-height:500px;
 	background:linear-gradient(to top,white,#e3e9ea);
 }
-
+.catalog-full{
+	width:auto;
+	height: auto;
+	
+}

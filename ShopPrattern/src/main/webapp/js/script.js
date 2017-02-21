@@ -19,12 +19,15 @@ $('#catalog p a').mouseover(function(event){
 	closeAllCatalog();
 	 event.preventDefault(); 
     $($(this).attr('href')).attr( 'style', 'display:inline-block' );
-
-
-   
+    $('#cantainer-catalog').attr( 'style', 'display:inline-block' );
+    $('#catalog-menu').width( $('#catalog-menu').width()+$($(this).attr('href')).width());
+    $('#catalog-full').width( $('#catalog-full').width()+$($(this).attr('href')).width());
+    
+    
 });	
-$('#catalog-menu').mouseleave(function(event){
+$('#catalog-full').mouseleave(function(event){
 	closeAllCatalog();
+	
 	 event.preventDefault(); 
 });	
 
@@ -32,6 +35,8 @@ $('#catalog-menu').mouseleave(function(event){
    
 	
 function closeAllCatalog(){
+	$('#catalog-menu').attr( 'style', 'width:auto' );
+	$('#catalog-full').attr( 'style', 'width:auto' );
 	
 	$('#cantainer-catalog div').attr( 'style', 'display:none' );
 }
