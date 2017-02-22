@@ -25,25 +25,55 @@ public class CategoryAndCatalogController {
 	@Autowired
 	private CatalogService catalogService;
 	
+	
+	
+	
+//	------------------------------save-------------------------------------
+	
 	@RequestMapping(value="/saveCategory",method=RequestMethod.POST)
 	public void saveCatagory(@RequestBody Category category){
 		
 		categoryService.save(category);
 	}
+	
 	@RequestMapping(value="/saveCatalog",method=RequestMethod.POST)
 	public void saveCatalog(@RequestBody Catalog catalog){
 		
 		catalogService.save(catalog);
 	}
-	@RequestMapping(value="/Categories",method=RequestMethod.POST)
+	
+// ----------------------------load-----------------------------------------
+	
+	@RequestMapping(value="/loadCategories",method=RequestMethod.POST)
 	public List<CategoryDTO> loadCatagory(){
 		
 		return DTOUtilMapper.categoryToCategoryDTO(categoryService.findAll());
 	}
-	@RequestMapping(value="/Catalogs",method=RequestMethod.POST)
+	
+	@RequestMapping(value="/loadCatalogs",method=RequestMethod.POST)
 	public List<CatalogDTO> loadCatalogs(){
 		
 		return DTOUtilMapper.catalogToCatalogDTO(catalogService.findAll());
 	}
+	
+//------------------------------------delete--------------------------------
+	
+    @RequestMapping(value = "/deleteCategory", method = RequestMethod.POST)
+    public List<CategoryDTO> deleteCategory(@RequestBody String index) {
+
+        categoryService.delete(Integer.parseInt(index));
+
+        return DTOUtilMapper.categoryToCategoryDTO(categoryService.findAll());
+
+    }
+    
+    @RequestMapping(value = "/deleteCatalog", method = RequestMethod.POST)
+    public List<CatalogDTO> deleteCatalog(@RequestBody String index) {
+
+        catalogService.delete(Integer.parseInt(index));
+
+        return DTOUtilMapper.catalogToCatalogDTO(catalogService.findAll());
+
+    }
 
 }
