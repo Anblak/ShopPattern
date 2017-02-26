@@ -3,7 +3,7 @@
 // ------------------------------- CATEGORY!!!!!!-----------------------------------------
 //========================================================================================
 
-document.getElementById('save').onclick = function () {
+document.getElementById('saveCategory').onclick = function () {
 	
 
         var category = {
@@ -22,8 +22,18 @@ document.getElementById('save').onclick = function () {
             contentType: 'application/json; charset=UTF-8',
             dataType: 'json',
             data: JSON.stringify(category),
-            success: function (res) {        
+            success: function (res) { 
+            	
+    	
+                var all = '';
+
+                for (var i = 0; i < res.length; i++) {
+                    var index = res[i].id;
+                    all += '<div class="box">'+res[i].name +'<a onclick="deleteCategory(' + index + ')"> delete </div><br>';
+                }
+                document.querySelector('.all').innerHTML = all;
             }
+            
 
         })
     
@@ -63,13 +73,13 @@ function deleteCategory(index) {
         data: '' + index,
         success: function (res) {
 
-//            var all = '';
-//
-//            for (var i = 0; i < res.length; i++) {
-//                var index = res[i].id;
-//                all += '<div class="box">'+res[i].name +'<a onclick="deleteCategory(' + index + ')"> delete </div><br>';
-//            }
-//            document.querySelector('.all').innerHTML = all;
+            var all = '';
+
+            for (var i = 0; i < res.length; i++) {
+                var index = res[i].id;
+                all += '<div class="box">'+res[i].name +'<a onclick="deleteCategory(' + index + ')"> delete </div><br>';
+            }
+            document.querySelector('.all').innerHTML = all;
         	
         }
     })
@@ -112,6 +122,14 @@ document.getElementById('saveCatalog').onclick = function () {
         dataType: 'json',
         data: JSON.stringify(catalog),
         success : function (res) {
+        	
+        	   var all = '';
+
+               for (var i = 0; i < res.length; i++) {
+                   var index = res[i].id;
+                   all += '<div class="box">'+res[i].name +'<a onclick="deleteCatalog(' + index + ')"> delete </div><br>';
+               }
+               document.querySelector('.all').innerHTML = all;
         }
     })
 }
@@ -149,13 +167,13 @@ function deleteCatalog(index) {
         data: '' + index,
         success: function (res) {
 
-//            var all = '';
-//
-//            for (var i = 0; i < res.length; i++) {
-//                var index = res[i].id;
-//                all += '<div class="box">'+res[i].name +'<a onclick="deleteCatalog(' + index + ')"> delete </div><br>';
-//            }
-//            document.querySelector('.all').innerHTML = all;
+            var all = '';
+
+            for (var i = 0; i < res.length; i++) {
+                var index = res[i].id;
+                all += '<div class="box">'+res[i].name +'<a onclick="deleteCatalog(' + index + ')"> delete </div><br>';
+            }
+            document.querySelector('.all').innerHTML = all;
         	
         }
     })

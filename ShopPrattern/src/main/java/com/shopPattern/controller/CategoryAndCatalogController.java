@@ -31,15 +31,19 @@ public class CategoryAndCatalogController {
 //	------------------------------save-------------------------------------
 	
 	@RequestMapping(value="/saveCategory",method=RequestMethod.POST)
-	public void saveCatagory(@RequestBody Category category){
+	public List<CategoryDTO> saveCatagory(@RequestBody Category category){
 		
 		categoryService.save(category);
+		
+		return DTOUtilMapper.categoryToCategoryDTO(categoryService.findAll());
 	}
 	
 	@RequestMapping(value="/saveCatalog",method=RequestMethod.POST)
-	public void saveCatalog(@RequestBody Catalog catalog){
+	public List<CatalogDTO> saveCatalog(@RequestBody Catalog catalog){
 		
 		catalogService.save(catalog);
+		
+		return DTOUtilMapper.catalogToCatalogDTO(catalogService.findAll());
 	}
 	
 // ----------------------------load-----------------------------------------
