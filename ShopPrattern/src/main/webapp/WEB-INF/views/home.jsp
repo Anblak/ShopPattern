@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
-	
-<div id="wrapper">
+<div id="user" style="display:none">none</div>	
+<div id="wrapper">	
   <header id="header" class="header" >
 		<div class="container">
 				<div class="row">
@@ -28,8 +28,41 @@
 					
 						<nav class="h-nav pull-right fix border-fix">
 							<a href="#">Перевірити замовлення</a>
-							<a href="#">Особистий кабінет</a>
+							<a href="#" id="user-office">Особистий кабінет</a>
 						
+
+			<div id="registration" class="modal">
+
+				<div class="modal-content animate" >
+					<div class="imgcontainer">
+						<span
+							onclick="document.getElementById('registration').style.display='none'"
+							class="close" title="Close Modal">&times;</span> 
+					</div>
+
+					<div class="containerm">
+
+						<center><label><b>Login</b></label></center> <input type="text" id="name" name="login"
+							class="validate[required,custom[name],length[0,100]] feedback-input"
+							placeholder="name" required>
+							<center><label><b>Password</b></label></center> <input type="password" id="password" name="password"
+							class="validate[required,custom[name],length[0,100]] feedback-input"
+							placeholder="name" required>
+							
+							
+						
+						<!--  <input type="checkbox" checked="checked"> Remember me-->
+
+					</div>
+					<div class="containerm" style="background-color: #f1f1f1">
+						<center><button type="button"
+							onclick="document.getElementById('registration').style.display='none'"
+							class="cancelbtn">Cancel</button>
+							<button type="submit" class="button-reg" id="button-reg">reg</button></center>
+					</div>
+				</div>
+			</div>
+						<!-- ----------------------------------------------------------end reg -->
 						</nav>
 					
 					</div>
@@ -114,9 +147,7 @@
 						<div class="catalog-full" id="catalog-full">
 						<div class="left-main-catalog" id="catalog">
 						<p><a  href="#1-catalog">kategoria1</a></p>
-						<p><a  href="#2-catalog">kategoria2</a></p>
-						<p><a  href="#3-catalog">kategoria3</a></p>
-						<p><a  href="#4-catalog">kategoria4</a></p>
+						
 						</div>
 					
 				<div id="cantainer-catalog" class="cantainer-catalog">
@@ -128,30 +159,7 @@
 						<p><a  href="#4">kategoria1.5</a></p>
 						<p><a  href="#4">kategoria1.5</a></p>
 					</div>
-					<div class="categoria-menu" id="2-catalog">
-						<p><a  href="#4">kategoria2.1</a></p>
-						<p><a  href="#4">kategoria2.2</a></p>
-						<p><a  href="#4">kategoria2.3</a></p>
-						<p><a  href="#4">kategoria2.4</a></p>
-						<p><a  href="#4">kategoria2.5</a></p>
-						<p><a  href="#4">kategoria2.5</a></p>
-					</div>
-					<div class="categoria-menu" id="3-catalog">
-						<p><a  href="#4">kategoria3.1</a></p>
-						<p><a  href="#4">kategoria3.2</a></p>
-						<p><a  href="#4">kategoria3.3</a></p>
-						<p><a  href="#4">kategoria3.4</a></p>
-						<p><a  href="#4">kategoria3.5</a></p>
-						<p><a  href="#4">kategoria3.5</a></p>
-					</div>
-					<div class="categoria-menu" id="4-catalog">
-						<p><a  href="#4">kategoria4.1</a></p>
-						<p><a  href="#4">kategoria4.2</a></p>
-						<p><a  href="#4">kategoria4.3</a></p>
-						<p><a  href="#4">kategoria4.4</a></p>
-						<p><a  href="#4">kategoria4.5</a></p>
-						<p><a  href="#4">kategoria4.5</a></p>
-					</div>
+			
 				</div>
 				</div>
 				</div>

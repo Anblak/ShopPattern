@@ -41,3 +41,20 @@ function closeAllCatalog(){
 	$('#cantainer-catalog div').attr( 'style', 'display:none' );
 }
 }
+
+$('#user-office').click(function(event){
+		
+	 event.preventDefault(); 
+	
+	if(document.getElementById('user').innerHTML=="none"){
+		document.getElementById('registration').style.display='block';
+	}else{
+		
+		
+	}
+});
+$('#button-reg').click(function(event){
+	document.getElementById('registration').style.display='none';
+	 event.preventDefault(); 
+	 
+});
