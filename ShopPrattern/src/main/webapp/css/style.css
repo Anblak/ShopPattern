@@ -500,4 +500,8 @@ span.pswb {
 }
 h{
 	display:none;
+	color:red;
+}
+.reg-error{
+	color:red;
 }
