@@ -104,7 +104,7 @@ $('#reg-button-reg')
 							document.getElementById('reg-error').innerHTML += 'невведений пароль<br>';
 							document.getElementById('reg-error-h-password').style.display = 'inline-block';
 						}else{
-							document.getElementById('reg-error-h-password-r').style.display = 'none';
+							document.getElementById('reg-error-h-password').style.display = 'none';
 						} if (document.getElementById('reg-login').value == "") {
 							document.getElementById('reg-error').innerHTML += 'невведегний логін<br>';
 							document.getElementById('reg-error-h-login').style.display = 'inline-block';
