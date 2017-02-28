@@ -95,10 +95,14 @@ $('#reg-button-reg')
 						} else{
 							document.getElementById('reg-error-h-password').style.display = 'none';
 						}
-						if (document.getElementById('reg-password-r').value == ""
-								&& document.getElementById('reg-password').value == "") {
+						if (document.getElementById('reg-password-r').value == "") {
 							document.getElementById('reg-error').innerHTML += 'невведений пароль<br>';
 							document.getElementById('reg-error-h-password-r').style.display = 'inline-block';
+						}else{
+							document.getElementById('reg-error-h-password-r').style.display = 'none';
+						}if (document.getElementById('reg-password').value == "") {
+							document.getElementById('reg-error').innerHTML += 'невведений пароль<br>';
+							document.getElementById('reg-error-h-password').style.display = 'inline-block';
 						}else{
 							document.getElementById('reg-error-h-password-r').style.display = 'none';
 						} if (document.getElementById('reg-login').value == "") {
