@@ -77,8 +77,12 @@ $('#button-reg').click(function(event) {
 $('#reg-button-reg')
 		.click(
 				function(event) {
+					document.getElementById('registration').style.display = 'block';
+					document.getElementById('login').style.display = 'none';
 					document.getElementById('reg-error').innerHTML = '';
+					
 					event.preventDefault();
+					
 					if (document.getElementById('reg-password').value != document
 							.getElementById('reg-password-r').value
 							|| document.getElementById('reg-password-r').value == ""
@@ -128,8 +132,28 @@ $('#reg-button-reg')
 						document.getElementById('reg-error-h-email').style.display = 'none';
 						document.getElementById('reg-error-h-phone').style.display = 'none';
 
-						document.getElementById('login').style.display = 'none';
-						document.getElementById('registration').style.display = 'block';
+						
+						
+						document.getElementById('reg-error').style.color="green";
 						document.getElementById('reg-error').innerHTML = 'реєстрація';
+						
+						var user = {
+								login : document.getElementById('reg-login').value,
+								email : document.getElementById('reg-email').value,
+								phone : document.getElementById('reg-phone').value,
+								password : document.getElementById('reg-password').value
+							}
+							$.ajax({
+								url: 'saveUser?' + $('input[name=csrf_name]').val() + "=" + $('input[name=csrf_value]').val(),
+								method: 'POST',
+								contentType: 'application/json; charset=UTF-8',
+								dataType: 'json',
+								data: JSON.stringify(user),
+								success : function (res) {
+									document.getElementById('registration').style.display = 'none';
+									document.getElementById('login').style.display = 'block';
+								}
+							})
+						
 					}
 				});
