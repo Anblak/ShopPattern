@@ -144,7 +144,7 @@ $('#reg-button-reg')
 								password : document.getElementById('reg-password').value
 							}
 							$.ajax({
-								url: 'saveUser?' + $('input[name=csrf_name]').val() + "=" + $('input[name=csrf_value]').val(),
+								url: 'registration?' + $('input[name=csrf_name]').val() + "=" + $('input[name=csrf_value]').val(),
 								method: 'POST',
 								contentType: 'application/json; charset=UTF-8',
 								dataType: 'json',
