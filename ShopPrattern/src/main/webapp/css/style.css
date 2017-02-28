@@ -359,7 +359,7 @@ i.ic-heart{
 
 @CHARSET "UTF-8";
 /* Full-width input fields */
-.modal input[type=text], input[type=password], input[type=email], input[type=file]
+.modal input[type=text], input[type=password], input[type=email], input[type=file] ,input[type=tel]
 	{
 	
 	padding: 12px 20px;
@@ -479,7 +479,7 @@ span.pswb {
 	color: red;
 	cursor: pointer;
 }
-.button-reg{
+.button-log{
 	width: 100px;
 	color:black;
 	background:linear-gradient(to top,white,#e3e9ea);
@@ -488,5 +488,16 @@ span.pswb {
 	margin-top:8px;
 	box-shadow: 0 0 3px 0px rgba(0,0,0,1.0); /* Параметры тени */
 }
+.button-reg{
 
-
+ 	width: 100px;
+	color:black;
+	background:linear-gradient(to top,white,#e3e9ea);
+	padding: 10px 18px;
+	height: 40px;
+	margin-top:8px;
+	box-shadow: 0 0 3px 0px rgba(0,0,0,1.0); /* Параметры тени */
+}
+h{
+	display:none;
+}

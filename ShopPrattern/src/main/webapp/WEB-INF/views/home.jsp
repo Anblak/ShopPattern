@@ -31,12 +31,12 @@
 							<a href="#" id="user-office">Особистий кабінет</a>
 						
 
-			<div id="registration" class="modal">
+			<div id="login" class="modal">
 
 				<div class="modal-content animate" >
 					<div class="imgcontainer">
 						<span
-							onclick="document.getElementById('registration').style.display='none'"
+							onclick="document.getElementById('login').style.display='none'"
 							class="close" title="Close Modal">&times;</span> 
 					</div>
 
@@ -56,13 +56,59 @@
 					</div>
 					<div class="containerm" style="background-color: #f1f1f1">
 						<center><button type="button"
-							onclick="document.getElementById('registration').style.display='none'"
+							onclick="document.getElementById('login').style.display='none'"
 							class="cancelbtn">Cancel</button>
-							<button type="submit" class="button-reg" id="button-reg">reg</button></center>
+							<button type="submit" class="button-log" id="button-log">log</button> <button href="#" id="button-reg" class="button-reg" >reg</button></center>
+							
 					</div>
 				</div>
 			</div>
-						<!-- ----------------------------------------------------------end reg -->
+			
+					<div id="registration" class="modal">
+
+				<div class="modal-content animate" >
+					<div class="imgcontainer">
+						<span
+							onclick="document.getElementById('registration').style.display='none'"
+							class="close" title="Close Modal">&times;</span> 
+					</div>
+
+					<div class="containerm">
+
+						<center><label><b>Login<h id="reg-error-h-login">+</h></b></label></center> <input type="text" id="reg-login" name="password"
+							class="validate[required,custom[name],length[0,100]] feedback-input"
+							placeholder="name" required>
+							<center><label><b>eMail<h id="reg-error-h-email">+</h></b></label></center> <input type="email" id="reg-email" name="password"
+							class="validate[required,custom[name],length[0,100]] feedback-input"
+							placeholder="name" required>
+							<center><label><b>Phone<h id="reg-error-h-phone">+</h></b></label></center> <input type="tel" id="reg-phone" name="password"
+							class="validate[required,custom[name],length[0,100]] feedback-input"
+							placeholder="name" required>
+							<center><label><b>Password<h id="reg-error-h-password">+</h></b></label></center> <input type="password" id="reg-password" name="password"
+							class="validate[required,custom[name],length[0,100]] feedback-input"
+							placeholder="name" required>
+							<center><label><b>Password<h id="reg-error-h-password-r">+</h></b></label></center> <input type="password" id="reg-password-r" name="password"
+							class="validate[required,custom[name],length[0,100]] feedback-input"
+							placeholder="name" required>
+							
+							<center><label><b id="reg-error"></b></label></center> 
+						
+						<!--  <input type="checkbox" checked="checked"> Remember me-->
+
+					</div>
+					<div class="containerm" style="background-color: #f1f1f1">
+						<center><button type="button"
+							onclick="document.getElementById('registration').style.display='none'"
+							class="cancelbtn">Cancel</button>
+							<button type="button"
+							
+							id="reg-button-reg" class="button-reg">reg</button></center>
+							
+							
+					</div>
+				</div>
+			</div>
+						<!-- ----------------------------------------------------------end reg and log -->
 						</nav>
 					
 					</div>
