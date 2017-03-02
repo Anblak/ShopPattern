@@ -138,7 +138,7 @@ $('#reg-button-reg')
 						document.getElementById('reg-error').innerHTML = 'реєстрація';
 						
 						var user = {
-								login : document.getElementById('reg-login').value,
+								name : document.getElementById('reg-login').value,
 								email : document.getElementById('reg-email').value,
 								phone : document.getElementById('reg-phone').value,
 								password : document.getElementById('reg-password').value

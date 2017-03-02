@@ -1,12 +1,14 @@
 
  <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%> 
-   
+ <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>  
     
    
   
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<script src="js/jsInEveryHouse.js"></script>
+	
      <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 <div id="user" style="display:none">none</div>	
@@ -41,16 +43,16 @@
 					</div>
 
 					<div class="containerm">
-
-						<center><label><b>Login</b></label></center> <input type="text" id="name" name="login"
+		<form:form action="loginprocesing" method="post">
+						<center><label><b>Login</b></label></center> <input type="text" id="name" name="username"
 							class="validate[required,custom[name],length[0,100]] feedback-input"
 							placeholder="name" required>
 							<center><label><b>Password</b></label></center> <input type="password" id="password" name="password"
 							class="validate[required,custom[name],length[0,100]] feedback-input"
 							placeholder="name" required>
 							
-							
-						
+							<button type="submit" class="button-log" id="button-log">log</button>
+						  </form:form>
 						<!--  <input type="checkbox" checked="checked"> Remember me-->
 
 					</div>
@@ -58,7 +60,7 @@
 						<center><button type="button"
 							onclick="document.getElementById('login').style.display='none'"
 							class="cancelbtn">Cancel</button>
-							<button type="submit" class="button-log" id="button-log">log</button> <button href="#" id="button-reg" class="button-reg" >reg</button></center>
+							 <button href="#" id="button-reg" class="button-reg" >reg</button></center>
 							
 					</div>
 				</div>
@@ -211,6 +213,11 @@
 				</div>
 				</div>
 		</div>
+		
+				<input id="nameCatalog">
+<button id="saveCatalog">Save Catalog</button>
+
+<div id="allCatalogs"></div>
    </main>
     <footer class="footer"> 
 		<div id="wrapper">
@@ -218,8 +225,10 @@
 			
 			</div>
 		</div>
+
+
    </footer>
-   
+   <script src="js/jquery-3.1.1.min.js"></script>
 	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -227,5 +236,6 @@
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/researchbutton.js"></script>
 	<script src="js/script.js"></script>
+
 	<script>action()</script>
 	

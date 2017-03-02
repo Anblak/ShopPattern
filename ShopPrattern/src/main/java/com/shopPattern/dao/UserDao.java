@@ -6,6 +6,8 @@ import org.springframework.data.repository.query.Param;
 
 import com.shopPattern.entity.User;
 
+
+
 public interface UserDao extends JpaRepository<User, Integer>{
 	User findByName(String name);
 	

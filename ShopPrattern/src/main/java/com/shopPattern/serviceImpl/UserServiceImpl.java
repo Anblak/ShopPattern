@@ -14,6 +14,8 @@ import com.shopPattern.entity.Role;
 import com.shopPattern.entity.User;
 import com.shopPattern.service.UserService;
 
+
+
 @Service("userDetailsService")
 public class UserServiceImpl implements UserService, UserDetailsService {
 

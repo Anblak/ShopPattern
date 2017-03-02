@@ -3,7 +3,7 @@
 // ------------------------------- CATEGORY!!!!!!-----------------------------------------
 //========================================================================================
 
-document.getElementById('saveCategory').onclick = function () {
+ function saveCategory() {
 	
 
         var category = {
@@ -31,7 +31,7 @@ document.getElementById('saveCategory').onclick = function () {
                     var index = res[i].id;
                     all += '<div class="box">'+res[i].name +'<a onclick="deleteCategory(' + index + ')"> delete </div><br>';
                 }
-                document.querySelector('.all').innerHTML = all;
+                document.getElementById('allCategories').innerHTML = all;
             }
             
 
@@ -56,7 +56,7 @@ window.onload = function () {
                 var index = res[i].id;
                 all += '<div class="box">'+res[i].name +'<a onclick="deleteCategory(' + index + ')"> delete </div><br>';
             }
-            document.querySelector('.all').innerHTML = all;
+            document.getElementById('allCategories').innerHTML = all;
         }
     })
 
@@ -79,7 +79,7 @@ function deleteCategory(index) {
                 var index = res[i].id;
                 all += '<div class="box">'+res[i].name +'<a onclick="deleteCategory(' + index + ')"> delete </div><br>';
             }
-            document.querySelector('.all').innerHTML = all;
+            document.getElementById('allCategories').innerHTML = all;
         	
         }
     })
@@ -98,17 +98,17 @@ function deleteCategory(index) {
 //------------------------------------CATALOG--------------------------------------------------
 
 
-document.getElementById('saveCatalog').onclick = function () {
+function saveCatalog() {
 
     var catalog = {
 
         name : $('#nameCatalog').val(),
 
-        category : {
-
-            id : document.getElementById('idCategory').value
-
-        }
+//        category : {
+//
+//            id : document.getElementById('idCategory').value
+//
+//        }
 
     }
 
@@ -129,7 +129,7 @@ document.getElementById('saveCatalog').onclick = function () {
                    var index = res[i].id;
                    all += '<div class="box">'+res[i].name +'<a onclick="deleteCatalog(' + index + ')"> delete </div><br>';
                }
-               document.querySelector('.all').innerHTML = all;
+               document.getElementById('allCatalogs').innerHTML = all;
         }
     })
 }
@@ -150,7 +150,7 @@ window.onload = function () {
                 var index = res[i].id;
                 all += '<div class="box">'+res[i].name +'<a onclick="deleteCatalog(' + index + ')"> delete </div><br>';
             }
-            document.querySelector('.all').innerHTML = all;
+            document.getElementById('allCatalogs').innerHTML = all;
         }
     })
 
@@ -173,7 +173,7 @@ function deleteCatalog(index) {
                 var index = res[i].id;
                 all += '<div class="box">'+res[i].name +'<a onclick="deleteCatalog(' + index + ')"> delete </div><br>';
             }
-            document.querySelector('.all').innerHTML = all;
+            document.getElementById('allCatalogs').innerHTML = all;
         	
         }
     })

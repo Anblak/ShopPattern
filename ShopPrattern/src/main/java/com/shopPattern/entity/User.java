@@ -34,10 +34,10 @@ public class User implements UserDetails {
 	
 	
 	
+
+	
 	@OneToMany(mappedBy = "user")
 	private List<Buy> orders;
-	
-	
 	
 
 
@@ -153,6 +153,10 @@ public class User implements UserDetails {
 	}
 	
 	
+	
+	
+
+
 	public List<Buy> getOrders() {
 		return orders;
 	}
@@ -163,6 +167,8 @@ public class User implements UserDetails {
 	public void setOrders(List<Buy> orders) {
 		this.orders = orders;
 	}
+
+
 
 
 	public Collection<? extends GrantedAuthority> getAuthorities() {

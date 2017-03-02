@@ -6,15 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.shopPattern.dto.CatalogDTO;
 import com.shopPattern.dto.CategoryDTO;
-import com.shopPattern.dto.DTOUtilMapper;
+import com.shopPattern.dto.DtoUtilMapper;
 import com.shopPattern.entity.Catalog;
 import com.shopPattern.entity.Category;
 import com.shopPattern.service.CatalogService;
 import com.shopPattern.service.CategoryService;
+
+
 
 @RestController
 public class CategoryAndCatalogController {
@@ -35,15 +38,15 @@ public class CategoryAndCatalogController {
 		
 		categoryService.save(category);
 		
-		return DTOUtilMapper.categoryToCategoryDTO(categoryService.findAll());
+		return DtoUtilMapper.categoryToCategoryDTO(categoryService.findAll());
 	}
 	
 	@RequestMapping(value="/saveCatalog",method=RequestMethod.POST)
-	public List<CatalogDTO> saveCatalog(@RequestBody Catalog catalog){
+	public @ResponseBody List<CatalogDTO> saveCatalog(@RequestBody Catalog catalog){
 		
 		catalogService.save(catalog);
 		
-		return DTOUtilMapper.catalogToCatalogDTO(catalogService.findAll());
+		return DtoUtilMapper.catalogToCatalogDTO(catalogService.findAll());
 	}
 	
 // ----------------------------load-----------------------------------------
@@ -51,13 +54,13 @@ public class CategoryAndCatalogController {
 	@RequestMapping(value="/loadCategories",method=RequestMethod.POST)
 	public List<CategoryDTO> loadCatagory(){
 		
-		return DTOUtilMapper.categoryToCategoryDTO(categoryService.findAll());
+		return DtoUtilMapper.categoryToCategoryDTO(categoryService.findAll());
 	}
 	
 	@RequestMapping(value="/loadCatalogs",method=RequestMethod.POST)
-	public List<CatalogDTO> loadCatalogs(){
+	public @ResponseBody List<CatalogDTO> loadCatalogs(){
 		
-		return DTOUtilMapper.catalogToCatalogDTO(catalogService.findAll());
+		return DtoUtilMapper.catalogToCatalogDTO(catalogService.findAll());
 	}
 	
 //------------------------------------delete--------------------------------
@@ -67,16 +70,16 @@ public class CategoryAndCatalogController {
 
         categoryService.delete(Integer.parseInt(index));
 
-        return DTOUtilMapper.categoryToCategoryDTO(categoryService.findAll());
+        return DtoUtilMapper.categoryToCategoryDTO(categoryService.findAll());
 
     }
     
     @RequestMapping(value = "/deleteCatalog", method = RequestMethod.POST)
-    public List<CatalogDTO> deleteCatalog(@RequestBody String index) {
+    public @ResponseBody List<CatalogDTO> deleteCatalog(@RequestBody String index) {
 
         catalogService.delete(Integer.parseInt(index));
 
-        return DTOUtilMapper.catalogToCatalogDTO(catalogService.findAll());
+        return DtoUtilMapper.catalogToCatalogDTO(catalogService.findAll());
 
     }
 

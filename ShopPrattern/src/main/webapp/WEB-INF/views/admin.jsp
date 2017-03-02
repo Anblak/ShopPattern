@@ -6,22 +6,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Admin bitch!</title>
 <script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/jsInEveryHouse.js"></script>
 </head>
 
 <body>
 
 	<h1>Admin</h1>
 	
-<input type="text" id="nameCategory">
-
-<button id="saveCategory">Save Category</button>
-
-<div id="allCategories"></div>
-
-<br>
-
 <input id="nameCatalog">
+<button id="saveCatalog">Save Catalog</button>
 
+<div id="allCatalogs"></div>
+<br>
+	
+	
+	
+<input type="text" id="nameCategory">
 <select id="select" class="select-fix">
 	<option value="">all</option>
 	<option value="">option2</option>
@@ -29,11 +29,15 @@
 	<option value="">option4</option>
 </select>
 
-<button id="saveCatalog">Save Catalog</button>
+<button id="saveCategory">Save Category</button>
 
-<div id="allCatalogs"></div>
+<div id="allCategories"></div>
 
-<script src="js/jsInEveryHouse.js"></script>
+<br>
+
+
+
+
 
 </body>
 </html>

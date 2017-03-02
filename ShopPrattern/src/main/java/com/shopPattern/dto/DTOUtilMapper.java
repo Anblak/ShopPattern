@@ -3,26 +3,41 @@ package com.shopPattern.dto;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.shopPattern.entity.Book;
 import com.shopPattern.entity.Catalog;
 import com.shopPattern.entity.Category;
 
 
 
-public class DTOUtilMapper {
+public class DtoUtilMapper {
 	
 	public static List<CatalogDTO> catalogToCatalogDTO(List<Catalog>catalogs){		
 		List<CatalogDTO> catalogDTOs=new ArrayList<CatalogDTO>();
 		
 		for (Catalog catalog : catalogs) {
 			
-			CatalogDTO catalogDTO=new CatalogDTO();
-			catalogDTO.setName(catalog.getName());
-			catalogDTO.setId(catalog.getId());
-		
-			catalogDTOs.add(catalogDTO);
+			catalogDTOs.add(new CatalogDTO(catalog.getId(),catalog.getName()));
 			
 		}
 		return catalogDTOs;
+	}
+	
+	public static List<BookDTO> booksToBooksDTO(List<Book> books) {
+
+		List<BookDTO> bookDTOs = new ArrayList<BookDTO>();
+
+		for (Book book : books) {
+			BookDTO bookDTO = new BookDTO();
+
+			bookDTO.setTitle(book.getTitle());
+			bookDTO.setPages(book.getPages());
+
+			bookDTOs.add(bookDTO);
+
+		}
+
+		return bookDTOs;
+
 	}
 	
 	public static List<CategoryDTO> categoryToCategoryDTO(List<Category>categories){		

@@ -6,6 +6,8 @@ import com.shopPattern.entity.Catalog;
 
 
 
+
+
 public interface CatalogService {
 	void save(Catalog catalog);
 	List<Catalog> findAll();

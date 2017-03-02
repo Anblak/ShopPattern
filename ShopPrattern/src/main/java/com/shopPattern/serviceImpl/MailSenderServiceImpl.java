@@ -19,11 +19,13 @@ import com.shopPattern.service.MailSenderService;
 
 
 
+
+
 @Service
 public class MailSenderServiceImpl implements MailSenderService{
 
-    private final static String USERNAME = "mail@gmail.com";// mail
-    private final static String PASSWORD = "************";// password
+    private final static String USERNAME = "anazariks@gmail.com";// mail
+    private final static String PASSWORD = "yfpfh1998";// password
 
     @Async
     public void sendMail(String theme, String mailBody, String email) {

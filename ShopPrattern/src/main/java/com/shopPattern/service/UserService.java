@@ -6,6 +6,8 @@ import com.shopPattern.entity.User;
 
 
 
+
+
 public interface UserService {
 	void save(User user);
 
