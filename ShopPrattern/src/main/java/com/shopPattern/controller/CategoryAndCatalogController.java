@@ -34,7 +34,7 @@ public class CategoryAndCatalogController {
 //	------------------------------save-------------------------------------
 	
 	@RequestMapping(value="/saveCategory",method=RequestMethod.POST)
-	public List<CategoryDTO> saveCatagory(@RequestBody Category category){
+	public @ResponseBody List<CategoryDTO> saveCatagory(@RequestBody Category category){
 		
 		categoryService.save(category);
 		
@@ -52,7 +52,7 @@ public class CategoryAndCatalogController {
 // ----------------------------load-----------------------------------------
 	
 	@RequestMapping(value="/loadCategories",method=RequestMethod.POST)
-	public List<CategoryDTO> loadCatagory(){
+	public @ResponseBody List<CategoryDTO> loadCatagory(){
 		
 		return DtoUtilMapper.categoryToCategoryDTO(categoryService.findAll());
 	}
@@ -66,7 +66,7 @@ public class CategoryAndCatalogController {
 //------------------------------------delete--------------------------------
 	
     @RequestMapping(value = "/deleteCategory", method = RequestMethod.POST)
-    public List<CategoryDTO> deleteCategory(@RequestBody String index) {
+    public @ResponseBody List<CategoryDTO> deleteCategory(@RequestBody String index) {
 
         categoryService.delete(Integer.parseInt(index));
 

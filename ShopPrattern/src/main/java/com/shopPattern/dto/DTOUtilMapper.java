@@ -6,10 +6,21 @@ import java.util.List;
 import com.shopPattern.entity.Book;
 import com.shopPattern.entity.Catalog;
 import com.shopPattern.entity.Category;
+import com.shopPattern.entity.Goods;
 
 
 
 public class DtoUtilMapper {
+	
+	public static List<GoodsDTO> goodsToGoodsDTO(List<Goods> goods){
+		List<GoodsDTO> goodsDTOs=new ArrayList<>();
+		
+		for(Goods goodss :goods){
+			goodsDTOs.add(new GoodsDTO(goodss.getId(),goodss.getName(),
+					goodss.getDescription(),goodss.getPrice()));			
+		}
+		return goodsDTOs;
+	}
 	
 	public static List<CatalogDTO> catalogToCatalogDTO(List<Catalog>catalogs){		
 		List<CatalogDTO> catalogDTOs=new ArrayList<CatalogDTO>();
